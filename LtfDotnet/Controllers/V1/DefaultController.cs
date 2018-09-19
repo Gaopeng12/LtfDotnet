@@ -7,21 +7,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LtfDotnet.Controllers.V1
 {
-    [ApiVersion("1.0")]
+
     //[Route("api/v{version:apiVersion}/[controller]")]
     [Route("api/v1/[controller]")]
-    [ApiController]
-    public class DefaultController : ControllerBase
+    public class DefaultController : Controller
     {
         // GET: api/Default
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1---1.0", "value2---1.0" };
+            return new string[] { "value1---2.0", "value2---2.0" };
         }
 
         // GET: api/Default/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "Get1")]
         public string Get(int id)
         {
             return "value";

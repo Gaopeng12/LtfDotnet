@@ -7,11 +7,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LtfDotnet.Controllers.V2
 {
-    [ApiVersion("2.0")]
+  
     //[Route("api/v{version:apiVersion}/[controller]")]
     [Route("api/v2/[controller]")]
-    [ApiController]
-    public class DefaultController : ControllerBase
+    public class DefaultController : Controller
     {
         // GET: api/Default
         [HttpGet]
@@ -21,7 +20,7 @@ namespace LtfDotnet.Controllers.V2
         }
 
         // GET: api/Default/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
