@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LtfDotnet.Controllers
 {
+    [ApiVersionNeutral]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
